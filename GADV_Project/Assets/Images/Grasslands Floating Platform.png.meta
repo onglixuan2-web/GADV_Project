@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3444739b762c5a7489bf8afec6f8ed35
+guid: b7fd127601604064ea26d9d6a28265f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1855456659842185586
-    second: Grasslands Platform_0
+      213: -9002270262100016655
+    second: Grasslands Floating Platform_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grasslands Platform_0
+      name: Grasslands Floating Platform_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 3
-        width: 1384
-        height: 276
+        x: 19
+        y: 132
+        width: 929
+        height: 212
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8649fd9ff71046e0800000000000000
-      internalID: -1855456659842185586
+      spriteID: 1f1477784e2811380800000000000000
+      internalID: -9002270262100016655
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01d2f8c44bc1e344483f5e73f80fec2d
+    spriteID: 87c782e39879edb4baa367f49b3013db
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grasslands Platform_0: -1855456659842185586
+      Grasslands Floating Platform_0: -9002270262100016655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
