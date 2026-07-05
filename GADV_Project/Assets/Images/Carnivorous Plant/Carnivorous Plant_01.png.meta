@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4db5b0662e234b7408686065cc396961
+guid: d9d895d7961d3814180be30c5bf928a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2447898502757975272
-    second: Meredith_0
+      213: 3902511718591597314
+    second: Carnivorous Plant_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meredith_0
+      name: Carnivorous Plant_01_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 4
-        width: 554
-        height: 479
+        x: 62
+        y: 0
+        width: 438
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 10}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81b76e00841570ed0800000000000000
-      internalID: -2447898502757975272
+      spriteID: 20b837e4bb1882630800000000000000
+      internalID: 3902511718591597314
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 43c1e0a6f26b9f943948c83399c01040
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Meredith_0: -2447898502757975272
+      Carnivorous Plant_01_0: 3902511718591597314
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4db5b0662e234b7408686065cc396961
+guid: 4bb452db37f9a1943a3ba9f8536a38c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2447898502757975272
-    second: Meredith_0
+      213: 4606908045521496030
+    second: Heart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meredith_0
+      name: Heart_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 4
-        width: 554
-        height: 479
+        x: 0
+        y: 0
+        width: 47
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 10}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81b76e00841570ed0800000000000000
-      internalID: -2447898502757975272
+      spriteID: ed7a23e75760fef30800000000000000
+      internalID: 4606908045521496030
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 43c1e0a6f26b9f943948c83399c01040
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Meredith_0: -2447898502757975272
+      Heart_0: 4606908045521496030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
