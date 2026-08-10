@@ -54,7 +54,7 @@ public class CarnivorousPlant : MonoBehaviour
         // Check if the tag of collided object is "Player"
         if(collision.gameObject.CompareTag("Player"))
         {
-            // Player will take 1 point of damage
+            // Player will take damage
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }

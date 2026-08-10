@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // SerializeField to edit speed directly from Unity.
     // Use [SerializeField] private, instead of public to ensure that only this script can access this variable.
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 12f;
     private Rigidbody2D body;
     private Animator anim; 
     private bool grounded; // Helps to check if player is on or off the ground
@@ -13,9 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         // Grab references for Rigidbody 2D and Animator from GameObject
-        // Use GetComponent to access Rigidbody 2D.
-        // GetComponent will check the Player Gameobject for the Rigidbody 2D component.
-        // The Rigidbody 2D component will be stored inside the body variable.
+        // Use GetComponent to access Rigidbody 2D and Animator.
+        // GetComponent will check the Player Gameobject for the Rigidbody 2D and Animator components.
+        // The Rigidbody 2D and Animator components will be stored inside the body and anim variables.
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -24,13 +24,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called every frame, if the MonoBehaviour is enabled.
     private void Update() 
     {
+        // Input.GetAxis is a value defined by Unity, which changes the sprite's direction based on which key the player presses.
+        // This minimises the number of if-else statements required.
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // Left/Right Movements
-        // Use body.velocity to directly change the player's movement speed and direction.
+        // linearVelocity is how fast and in what direction the Rigidbody is moving.
         // Use Vector2 to assign the movement speed in the X and Y axes, because this is a 2D game.
-        // Input.GetAxis is a value defined by Unity, which changes the sprite's direction based on which key the player presses.
-        // This minimises the number of if-else statements required.
         // body.velocity.y ensures that the Y axis remains unchanged. Nothing happens when W, S, and arrow keys are pressed.
         body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
 
@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     // Optimise Jumping code
     private void Jump()
     {
+        // linearVelocity is how fast and in what direction the Rigidbody is moving.
         // body.velocity.x will ensure that the current velocity on the X axis remains unchanged when the Space key is pressed.
         // Applying speed on the Y axis will allow the player to jump when the Space key is pressed.
         body.linearVelocity = new Vector2(body.linearVelocity.x, speed);

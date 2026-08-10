@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private float attackCooldown; // This will represent the amount of time that needs to pass before the next attack
+    [SerializeField] private float attackCooldown = 2f; // This will represent the amount of time that needs to pass before the next attack
+    [SerializeField] private float damage = 2f;
+    [SerializeField] private AttackPoint attackPoint;
+
     private Animator anim; // Reference to the Animator
     private PlayerMovement playerMovement; // Reference to the PlayerMovement component
+    private bool isAttacking;
+
     // Use cooldownTimer to ensure that enough time has passed since the last attack
     // When the game starts, cooldownTimer = 0, player cannot attack straight away
     // Setting cooldownTimer to Mathf.Infinity will resolve that issue
@@ -36,9 +41,26 @@ public class PlayerAttack : MonoBehaviour
     // Attack method
     private void Attack()
     {
+        isAttacking = true;
+        attackPoint.ResetHit();
         // Play the attack animation when attacking
         anim.SetTrigger("Attack");
         // cooldownTimer will be reset to 0 after each attack
         cooldownTimer = 0;
+    }
+
+    public float GetDamage()
+    {
+        return damage;
+    }
+
+    public bool IsAttacking()
+    {
+        return isAttacking;
+    }
+
+    public void EndAttack()
+    {
+        isAttacking = false;
     }
 }

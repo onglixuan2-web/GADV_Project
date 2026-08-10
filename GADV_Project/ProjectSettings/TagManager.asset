@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Plant
+  - End Point
+  - Enemy
   layers:
   - Default
   - TransparentFX
