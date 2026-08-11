@@ -4878,7 +4878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3940316433108468445, guid: fc38573f1830b734b982dec3b45b9e21, type: 3}
       propertyPath: nextSceneName
-      value: 
+      value: Grasslands_02
       objectReference: {fileID: 0}
     - target: {fileID: 5626425358315485662, guid: fc38573f1830b734b982dec3b45b9e21, type: 3}
       propertyPath: m_LocalPosition.x
