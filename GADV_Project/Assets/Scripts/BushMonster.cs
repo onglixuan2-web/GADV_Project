@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class FireMonster : MonoBehaviour
+public class BushMonster : MonoBehaviour
 {
     [SerializeField] private float attackCooldown = 3f;
-    [SerializeField] private float range = 20f;
-    [SerializeField] private GameObject fireballPrefab;
-    [SerializeField] private Transform fireballSpawner;
+    [SerializeField] private float range = 10f;
+    [SerializeField] private GameObject vinePrefab;
+    [SerializeField] private Transform vineSpawner;
 
     private Animator anim;
     private Transform player;
@@ -22,7 +22,7 @@ public class FireMonster : MonoBehaviour
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
-        if(playerObject != null)
+        if (playerObject != null)
         {
             player = playerObject.transform;
         }
@@ -32,12 +32,12 @@ public class FireMonster : MonoBehaviour
     {
         cooldownTimer += Time.deltaTime;
 
-        if(player == null)
+        if (player == null)
             return;
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if(distance <= range && cooldownTimer >= attackCooldown)
+        if (distance <= range && cooldownTimer >= attackCooldown)
         {
             Attack();
         }
@@ -46,18 +46,18 @@ public class FireMonster : MonoBehaviour
     private void Attack()
     {
         anim.SetTrigger("Attack");
-        
+
         cooldownTimer = 0f;
     }
 
-    public void ShootFireball()
+    public void ShootVine()
     {
-        GameObject fireball = Instantiate(fireballPrefab, fireballSpawner.position, Quaternion.identity);
+        GameObject vine = Instantiate(vinePrefab, vineSpawner.position, Quaternion.identity);
 
-        Fireball fireballScript = fireball.GetComponent<Fireball>();
+        Vine vineScript = vine.GetComponent<Vine>();
 
-        Vector2 direction = player.position - fireballSpawner.position;
+        Vector2 direction = player.position - vineSpawner.position;
 
-        fireballScript.SetDirection(direction);
+        vineScript.SetDirection(direction);
     }
 }
