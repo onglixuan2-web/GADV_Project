@@ -8,6 +8,7 @@ TagManager:
   - Plant
   - End Point
   - Enemy
+  - Abyss
   layers:
   - Default
   - TransparentFX

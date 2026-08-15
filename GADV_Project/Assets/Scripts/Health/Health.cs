@@ -33,18 +33,10 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         // Player dead
-        //if(CompareTag("Player"))
-        //{
-            // Respawn the player at the starting point.
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
-        //else
-        //{
-            // Enemy dead
-            //Destroy(gameObject);
-        //}
+        // Respawn the player at the starting point.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
