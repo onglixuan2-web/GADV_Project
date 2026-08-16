@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CrumblingPlatform : MonoBehaviour
 {
-    [SerializeField] private float crumbleDelay = 0.1f;
+    [SerializeField] private float crumbleDelay = 0.15f;
 
     private Rigidbody2D[] crumblePieces;
     private bool hasCrumbled = false;
