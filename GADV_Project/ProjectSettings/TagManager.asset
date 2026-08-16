@@ -9,6 +9,7 @@ TagManager:
   - End Point
   - Enemy
   - Abyss
+  - Boulder
   layers:
   - Default
   - TransparentFX
