@@ -10,12 +10,15 @@ public class CrystalSpawner : MonoBehaviour
 
     private void Update()
     {
+        // Increment the spawnTimer by the time taken to finish the previous frame
         spawnTimer += Time.deltaTime;
 
+        // Check if the time passed after the crystal spawned >= crystal's spawn interval (time between each spawn)
         if(spawnTimer >= spawnInterval)
         {
             SpawnCrystal();
 
+            // Reset spawn timer to 0
             spawnTimer = 0f;
         }
     }

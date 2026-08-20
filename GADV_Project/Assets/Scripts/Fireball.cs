@@ -8,20 +8,22 @@ public class Fireball : MonoBehaviour
 
     private Vector2 direction;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        // Destroy the fireball after its lifetime 
         Destroy(gameObject, lifetime);
     }
 
-    // Update is called once per frame
     private void Update()
     {
+        // Make the fireball move in the calculated direction, at its movement speed
+        // Time.deltaTime makes it a per second movement instead of per frame
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
     public void SetDirection(Vector2 newDirection)
     {
+        // Get the calculated direction between the player and the fireball spawner
         direction = newDirection.normalized;
     }
 

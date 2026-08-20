@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Grasslands_03.unity
     guid: 4d4ff68221ac526458f16515b7137dc3
+  - enabled: 1
+    path: Assets/Scenes/Underground_01.unity
+    guid: c5e355e9a3b342448976b4d841ea2de2
+  - enabled: 1
+    path: Assets/Scenes/Underground_02.unity
+    guid: 3f3c92e8a8990384dbdd809a773c406e
+  - enabled: 1
+    path: Assets/Scenes/Underground_03.unity
+    guid: 2ef3c5b6206cf8546b730a371f7e5290
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

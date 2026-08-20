@@ -4894,7 +4894,8 @@ PrefabInstance:
       value: Bush Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3786691516681320895, guid: 9df7e5b89c7e4d54c909c385c83e24fb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9df7e5b89c7e4d54c909c385c83e24fb, type: 3}

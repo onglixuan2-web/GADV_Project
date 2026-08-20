@@ -16,14 +16,15 @@ public class CrumblingPlatform : MonoBehaviour
         // Keep all pieces stationary in the beginning
         foreach(Rigidbody2D piece in crumblePieces)
         {
+            // Change the Rigidbody type of all crumble pieces to Kinematic
+            // This will prevent them from falling
             piece.bodyType = RigidbodyType2D.Kinematic;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player Detected!");
-
+        // Check if the trigger has collided with the Player and if the platform has not crumbled
         if(collision.gameObject.CompareTag("Player") && !hasCrumbled)
         {
             hasCrumbled = true;
@@ -36,9 +37,8 @@ public class CrumblingPlatform : MonoBehaviour
     {
         foreach(Rigidbody2D piece in crumblePieces)
         {
-            Debug.Log("Pieces are now Dynamic!");
-
             // Turn this piece into a physics object
+            // Change the Rigidbody type of the crumble piece to Dynamic so that it will fall
             piece.bodyType = RigidbodyType2D.Dynamic;
 
             // Wait before the next piece falls

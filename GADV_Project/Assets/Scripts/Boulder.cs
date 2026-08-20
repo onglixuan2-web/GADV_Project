@@ -6,8 +6,10 @@ public class Boulder : MonoBehaviour
 
     private void Start()
     {
+        // Destroy the boulder after its lifetime
         Destroy(gameObject, lifetime);
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
