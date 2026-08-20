@@ -8,6 +8,7 @@ public class BoulderSlope : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Boulder"))
         {
+            // Destroy the slope after its lifetime ends
             Destroy(gameObject, lifetime);
         }
     }

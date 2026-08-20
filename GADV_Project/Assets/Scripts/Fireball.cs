@@ -6,24 +6,33 @@ public class Fireball : MonoBehaviour
     [SerializeField] private float damage = 1f;
     [SerializeField] private float lifetime = 5f;
 
+    // A variable used to store the direction that the fireball should travel
     private Vector2 direction;
 
     private void Start()
     {
-        // Destroy the fireball after its lifetime 
+        // Destroy the fireball after its lifetime ends
         Destroy(gameObject, lifetime);
     }
 
     private void Update()
     {
-        // Make the fireball move in the calculated direction, at its movement speed
-        // Time.deltaTime makes it a per second movement instead of per frame
+        // Make the fireball move continuously
+        // Translate moves the fireball by a certain amount
+        // direction determines which direction the fireball moves
+        // speed determines how far the fireball goes
+        // Time.deltaTime makes it a per second movement instead of per frame (movement based on time rather than frame rate)
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
+    // FireMonster.cs calculates the direction of the player and sends it to the fireball
+    // newDirection receives information on the player's direction from FireMonster.cs
     public void SetDirection(Vector2 newDirection)
     {
-        // Get the calculated direction between the player and the fireball spawner
+        // .normalized converts the direction into a vector with a length of approximately 1
+        // Without normalisation, the direction vector of a distant player could be much larger
+        // This would cause the fireball to move faster towards a player who is further away
+        // Normalisation ensures that the speed of the fireball does not change, no matter how far the player is
         direction = newDirection.normalized;
     }
 

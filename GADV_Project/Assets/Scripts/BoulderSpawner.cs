@@ -7,6 +7,7 @@ public class BoulderSpawner : MonoBehaviour
 
     public void SpawnBoulder()
     {
+        // Create a copy of the boulder prefab at the spawn point
         Instantiate(boulderPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }

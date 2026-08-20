@@ -3,9 +3,11 @@ using UnityEngine;
 public class CrystalSpawner : MonoBehaviour
    {
     [SerializeField] private GameObject crystalPrefab;
+    // Create an array of Transform references to store multiple spawn points
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private float spawnInterval = 1f;
 
+    // Keep track of how much time has passed since the last crystal was spawned
     private float spawnTimer;
 
     private void Update()
@@ -25,12 +27,14 @@ public class CrystalSpawner : MonoBehaviour
 
     private void SpawnCrystal()
     {
-        // Choose a random spawn point
+        // Choose a random spawn point, based on its index in the spawnPoints array
+        // The range is between 0 and the number of spawn points stored in the array
         int randomIndex = Random.Range(0, spawnPoints.Length);
 
+        // Get the selected spawn point
         Transform spawnPoint = spawnPoints[randomIndex];
 
-        // Spawn the crystal
+        // Create a copy of the crystal prefab at the selected spawn point
         Instantiate(crystalPrefab, spawnPoint.position, spawnPoint.rotation);
     }
    }

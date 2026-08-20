@@ -3,13 +3,17 @@ using UnityEngine;
 public class AttackPoint : MonoBehaviour
 {
     private PlayerAttack playerAttack;
-    private bool hasHit;
+    private bool hasHit; // Check whether an enemy has been hit
 
     private void Awake()
     {
         playerAttack = GetComponentInParent<PlayerAttack>();
     }
 
+    // OnTriggerEnter2D -> Runs once, at the exact moment when the 2 colliders touch
+    // OnTriggerStay2D -> Runs continuously while the 2 colliders are overlapping
+    // OnTriggerEnter2D -> Player has to move away and touch the enemy again, to attack them again
+    // OnTriggerStay2D -> Player can continuously attack the enemy without having to walk away and come back
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Check if the player is not attacking
@@ -33,6 +37,7 @@ public class AttackPoint : MonoBehaviour
         }
     }
 
+    // Reset hasHit to false
     public void ResetHit()
     {
         hasHit = false;

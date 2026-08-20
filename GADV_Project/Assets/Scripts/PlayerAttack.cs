@@ -28,10 +28,10 @@ public class PlayerAttack : MonoBehaviour
     {
         // Check if left mouse button is pressed
         // Check if the cooldownTimer > attackCooldown
-        // Check if the player is in a state that allows them to attack
         // If cooldownTimer > attackCooldown, enough time has passed to allow the next attack
+        // Check if the player is in a state that allows them to attack
         // If all conditions are met, the Attack() method will be called
-        if(Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMovement.canAttack())
+        if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMovement.canAttack())
             Attack();
 
         // Increment cooldownTimer on every frame by Time.deltaTime
@@ -42,6 +42,7 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         isAttacking = true;
+        // Reset hasHit to false
         attackPoint.ResetHit();
         // Play the attack animation when attacking
         anim.SetTrigger("Attack");
@@ -49,16 +50,19 @@ public class PlayerAttack : MonoBehaviour
         cooldownTimer = 0;
     }
 
+    // Make the value of damage accessible to other scripts
     public float GetDamage()
     {
         return damage;
     }
 
+    // Make the value of isAttacking accessible to other scripts
     public bool IsAttacking()
     {
         return isAttacking;
     }
 
+    // Reset isAttacking to false at the end of the attack animation
     public void EndAttack()
     {
         isAttacking = false;

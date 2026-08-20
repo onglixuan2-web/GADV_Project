@@ -6,7 +6,7 @@ public class Boulder : MonoBehaviour
 
     private void Start()
     {
-        // Destroy the boulder after its lifetime
+        // Destroy the boulder after its lifetime ends
         Destroy(gameObject, lifetime);
     }
 
